@@ -35,9 +35,6 @@ Maintainers:
 // Generic makeFunctor() mechanism added for building functors
 // from both stand-alone functions and object/ptr-to-mem-func pairs
 
-#ifndef FUNCTOR_H
-#define FUNCTOR_H
-
 /*
   To use:
 
