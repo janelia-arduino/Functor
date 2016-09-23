@@ -1,28 +1,51 @@
-#Callback
+#Functor
 
-Copyright 1994 Rich Hickey
-Permission to use, copy, modify, distribute and sell this software
-for any purpose is hereby granted without fee,
-provided that the above copyright notice appear in all copies and
-that both that copyright notice and this permission notice appear
-in supporting documentation.  Rich Hickey makes no
-representations about the suitability of this software for any
-purpose.  It is provided "as is" without express or implied warranty.
+Authors:
 
+    Rich Hickey
 
-06/12/94 Rich Hickey
-3rd major revision
-Now functors are concrete classes, and should be held by value
-Virtual function mechanism removed
-Generic makeFunctor() mechanism added for building functors
-from both stand-alone functions and object/ptr-to-mem-func pairs
+[CALLBACKS IN C++ USING TEMPLATE FUNCTORS](http://www.tutok.sk/fastgl/callback.html)
 
-To use:
+Modifications:
 
-  If you wish to build a component that provides/needs a callback,
-  simply specify and hold a CBFunctor of the type corresponding to the
-  args you wish to pass and the return value you need. There are 10
-  Functors from which to choose:
+    Peter Polidoro <polidorop@janelia.hhmi.org>
+
+```c++
+/* Callback.h
+ * This is Rich Hickey's callback library...
+ * http://www.tutok.sk/fastgl/callback.html
+ *
+ * I've just renamed it to Callback.h as all my header files use
+ * h for extension.
+ */
+//**************** callback.hpp **********************
+// Copyright 1994 Rich Hickey
+/* Permission to use, copy, modify, distribute and sell this software
+ * for any purpose is hereby granted without fee,
+ * provided that the above copyright notice appear in all copies and
+ * that both that copyright notice and this permission notice appear
+ * in supporting documentation.  Rich Hickey makes no
+ * representations about the suitability of this software for any
+ * purpose.  It is provided "as is" without express or implied warranty.
+ */
+
+// 06/12/94 Rich Hickey
+// 3rd major revision
+// Now functors are concrete classes, and should be held by value
+// Virtual function mechanism removed
+// Generic makeFunctor() mechanism added for building functors
+// from both stand-alone functions and object/ptr-to-mem-func pairs
+
+#ifndef CALLBACK_HPP
+#define CALLBACK_HPP
+
+/*
+  To use:
+
+  If you wish to build a component that provides/needs a callback, simply
+  specify and hold a CBFunctor of the type corresponding to the args
+  you wish to pass and the return value you need. There are 10 Functors
+  from which to choose:
 
   CBFunctor0
   CBFunctor1<P1>
@@ -91,7 +114,7 @@ To use:
 
   /////////////////////// BEGIN Example 1 //////////////////////////
   #include <iostream.h>
-  #include "callback.hpp"
+  #include "Callback.h"
 
   //do5Times() is a function that takes a functor and invokes it 5 times
 
@@ -143,7 +166,7 @@ To use:
 
   /////////////////////// BEGIN Example 2 //////////////////////////
   #include <iostream.h>
-  #include "callback.hpp"
+  #include "Callback.h"
 
   //Button is a component that provides a functor-based
   //callback mechanism, so you can wire it up to whatever you wish
@@ -183,4 +206,5 @@ To use:
   }
   /////////////////////// END of example 2 //////////////////////////
 
-
+  */
+```
