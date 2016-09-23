@@ -53,7 +53,7 @@ void setup()
   delay(1000);
 
   //create a typedef of the functor type to simplify dummy argument
-  typedef CBFunctor1<int> *FtorType;
+  typedef CBFunctor1<int> * FtorType;
 
   CBFunctor1<int> ftor; //a functor variable
   //make a functor from ptr-to-function

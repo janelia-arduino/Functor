@@ -31,24 +31,34 @@ class CDPlayer
 public:
   void play()
   {
-    Serial << "Playing"<<endl;
+    Serial << "Playing" << endl;
   }
   void stop()
   {
-    Serial << "Stopped"<<endl;
+    Serial << "Stopped" << endl;
   }
 };
+
+void wow()
+{
+  Serial  << "Wow!" << endl;
+}
 
 void setup()
 {
   Serial.begin(BAUDRATE);
   delay(1000);
 
+  // makeFunctor from object and ptr-to-member-function
   CDPlayer myCD;
-  Button playButton(makeFunctor((CBFunctor0*)0,myCD,&CDPlayer::play));
-  Button stopButton(makeFunctor((CBFunctor0*)0,myCD,&CDPlayer::stop));
+  Button playButton(makeFunctor((CBFunctor0 *)0,myCD,&CDPlayer::play));
+  Button stopButton(makeFunctor((CBFunctor0 *)0,myCD,&CDPlayer::stop));
   playButton.click(); //calls myCD.play()
   stopButton.click();  //calls myCD.stop()
+
+  // makeFunctor from pointer-to-function
+  Button wowButton(makeFunctor((CBFunctor0 *)0,&wow));
+  wowButton.click(); //calls wow()
 }
 
 void loop()
