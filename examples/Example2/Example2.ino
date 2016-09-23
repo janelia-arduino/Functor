@@ -1,6 +1,6 @@
 #include "Arduino.h"
 #include "Streaming.h"
-#include "Callback.h"
+#include "Functor.h"
 
 const unsigned int BAUDRATE = 9600;
 

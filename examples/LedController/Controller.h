@@ -6,7 +6,7 @@
 // ----------------------------------------------------------------------------
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
-#include "Callback.h"
+#include "Functor.h"
 #include "Array.h"
 #include "Constants.h"
 #include "Method.h"

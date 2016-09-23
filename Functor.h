@@ -1,11 +1,10 @@
-/* Callback.h
+/* Functor.h
  * This is Rich Hickey's callback library...
  * http://www.tutok.sk/fastgl/callback.html
  *
- * I've just renamed it to Callback.h as all my header files use
- * h for extension.
+ * I've just renamed it to Functor.h
  */
-//**************** Callback.h **********************
+//**************** Functor.h **********************
 // Copyright 1994 Rich Hickey
 /* Permission to use, copy, modify, distribute and sell this software
  * for any purpose is hereby granted without fee,
@@ -23,8 +22,8 @@
 // Generic makeFunctor() mechanism added for building functors
 // from both stand-alone functions and object/ptr-to-mem-func pairs
 
-#ifndef CALLBACK_HPP
-#define CALLBACK_HPP
+#ifndef FUNCTOR_H
+#define FUNCTOR_H
 
 /*
   To use:
@@ -101,7 +100,7 @@
 
   /////////////////////// BEGIN Example 1 //////////////////////////
   #include <iostream.h>
-  #include "Callback.h"
+  #include "Functor.h"
 
   //do5Times() is a function that takes a functor and invokes it 5 times
 
@@ -153,7 +152,7 @@
 
   /////////////////////// BEGIN Example 2 //////////////////////////
   #include <iostream.h>
-  #include "Callback.h"
+  #include "Functor.h"
 
   //Button is a component that provides a functor-based
   //callback mechanism, so you can wire it up to whatever you wish
@@ -1209,4 +1208,4 @@ makeFunctor(CBFunctor4wRet<P1,P2,P3,P4,RT>*,
 }
 
 
-#endif //CALLBACK_HPP
+#endif //FUNCTOR_H
