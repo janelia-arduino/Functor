@@ -486,7 +486,7 @@ public:
   {
     return BC4_RET_BUG(thunk(*this,p1));
   }
-  CBFunctorBase::operator int;
+  using CBFunctorBase::operator int;
   //for STL
   typedef P1 argument_type;
   typedef RT result_type;
@@ -588,7 +588,7 @@ public:
   {
     thunk(*this,p1,p2);
   }
-  CBFunctorBase::operator int;
+  using CBFunctorBase::operator int;
   //for STL
   typedef P1 first_argument_type;
   typedef P2 second_argument_type;
@@ -689,7 +689,7 @@ public:
   {
     return BC4_RET_BUG(thunk(*this,p1,p2));
   }
-  CBFunctorBase::operator int;
+  using CBFunctorBase::operator int;
   //for STL
   typedef P1 first_argument_type;
   typedef P2 second_argument_type;
@@ -793,7 +793,7 @@ public:
   {
     thunk(*this,p1,p2,p3);
   }
-  CBFunctorBase::operator int;
+  using CBFunctorBase::operator int;
 protected:
   typedef void (*Thunk)(const CBFunctorBase &,P1,P2,P3);
   CBFunctor3(Thunk t,const void *c,const void *f,size_t sz):
@@ -895,7 +895,7 @@ public:
   {
     return BC4_RET_BUG(thunk(*this,p1,p2,p3));
   }
-  CBFunctorBase::operator int;
+  using CBFunctorBase::operator int;
 protected:
   typedef RT (*Thunk)(const CBFunctorBase &,P1,P2,P3);
   CBFunctor3wRet(Thunk t,const void *c,const void *f,size_t sz):
@@ -1001,7 +1001,7 @@ public:
   {
     thunk(*this,p1,p2,p3,p4);
   }
-  CBFunctorBase::operator int;
+  using CBFunctorBase::operator int;
 protected:
   typedef void (*Thunk)(const CBFunctorBase &,P1,P2,P3,P4);
   CBFunctor4(Thunk t,const void *c,const void *f,size_t sz):
@@ -1108,7 +1108,7 @@ public:
   {
     return BC4_RET_BUG(thunk(*this,p1,p2,p3,p4));
   }
-  CBFunctorBase::operator int;
+  using CBFunctorBase::operator int;
 protected:
   typedef RT (*Thunk)(const CBFunctorBase &,P1,P2,P3,P4);
   CBFunctor4wRet(Thunk t,const void *c,const void *f,size_t sz):

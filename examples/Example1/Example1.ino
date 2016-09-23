@@ -6,9 +6,9 @@ const unsigned int BAUDRATE = 9600;
 
 //do5Times() is a function that takes a functor and invokes it 5 times
 
-void do5Times(const CBFunctor1<int> &doIt)
+void do5Times(const CBFunctor1<int> & doIt)
 {
-  for(int i=0;i<5;i++)
+  for(int i=0; i<5; ++i)
   {
     doIt(i);
   }
@@ -18,12 +18,12 @@ void do5Times(const CBFunctor1<int> &doIt)
 
 void fred(int i)
 {
-  Serial << "fred: " << i<<endl;
+  Serial << "fred: " << i << endl;
 }
 
 int ethel(long l)
 {
-  Serial << "ethel: " << l<<endl;
+  Serial << "ethel: " << l << endl;
   return l;
 }
 
@@ -34,7 +34,7 @@ class B
 public:
   virtual void ricky(int i)
   {
-    Serial << "B::ricky: " << i<<endl;
+    Serial << "B::ricky: " << i << endl;
   }
 };
 
@@ -43,7 +43,7 @@ class D : public B
 public:
   void ricky(int i)
   {
-    Serial << "D::ricky: " << i<<endl;
+    Serial << "D::ricky: " << i << endl;
   }
 };
 
