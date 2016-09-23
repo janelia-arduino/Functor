@@ -7,6 +7,16 @@
 #include "Controller.h"
 
 
+void writeLedOn()
+{
+  Serial << "led on" << endl;
+}
+
+void writeLedOff()
+{
+  Serial << "led off" << endl;
+}
+
 Controller::Controller()
 {
 }
@@ -21,9 +31,17 @@ void Controller::setup()
   led_on_method.attachCallback(makeFunctor((Functor0 *)0,*this,&Controller::setLedOnCallback));
   methods_.push_back(led_on_method);
 
+  Method write_led_on_method;
+  write_led_on_method.attachCallback(makeFunctor((Functor0 *)0,&writeLedOn));
+  methods_.push_back(write_led_on_method);
+
   Method led_off_method;
   led_off_method.attachCallback(makeFunctor((Functor0 *)0,*this,&Controller::setLedOffCallback));
   methods_.push_back(led_off_method);
+
+  Method write_led_off_method;
+  write_led_off_method.attachCallback(makeFunctor((Functor0 *)0,&writeLedOff));
+  methods_.push_back(write_led_off_method);
 
   // Setup Streams
   Serial.begin(constants::baudrate);
@@ -47,5 +65,3 @@ void Controller::setLedOffCallback()
 {
   digitalWrite(constants::led_pin,LOW);
 }
-
-Controller controller;

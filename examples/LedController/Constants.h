@@ -12,7 +12,6 @@
 
 namespace constants
 {
-//MAX values must be >= 1, >= created/copied count, < RAM limit
 enum{METHOD_COUNT_MAX=4};
 
 extern const size_t baudrate;

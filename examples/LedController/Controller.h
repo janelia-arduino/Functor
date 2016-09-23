@@ -8,6 +8,7 @@
 #define CONTROLLER_H
 #include "Functor.h"
 #include "Array.h"
+#include "Streaming.h"
 #include "Constants.h"
 #include "Method.h"
 
@@ -25,7 +26,5 @@ private:
   void setLedOnCallback();
   void setLedOffCallback();
 };
-
-extern Controller controller;
 
 #endif
