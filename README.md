@@ -1,14 +1,14 @@
-#Functor
+#Callback
 
 Authors:
 
     Rich Hickey
 
-[CALLBACKS IN C++ USING TEMPLATE FUNCTORS](http://www.tutok.sk/fastgl/callback.html)
-
-Modifications:
+Maintainers:
 
     Peter Polidoro <polidorop@janelia.hhmi.org>
+
+[CALLBACKS IN C++ USING TEMPLATE FUNCTORS](http://www.tutok.sk/fastgl/callback.html)
 
 ```c++
 /* Callback.h
@@ -35,9 +35,6 @@ Modifications:
 // Virtual function mechanism removed
 // Generic makeFunctor() mechanism added for building functors
 // from both stand-alone functions and object/ptr-to-mem-func pairs
-
-#ifndef CALLBACK_HPP
-#define CALLBACK_HPP
 
 /*
   To use:
