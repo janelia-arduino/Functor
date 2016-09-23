@@ -14,10 +14,10 @@ class Method
 {
 public:
   Method();
-  void attachCallback(const CBFunctor0 & callback);
+  void attachCallback(const Functor0 & callback);
   void callback();
 protected:
-  CBFunctor0 callback_;
+  Functor0 callback_;
   bool callback_is_attached_;
 };
 

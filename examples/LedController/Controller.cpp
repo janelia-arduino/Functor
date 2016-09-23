@@ -18,11 +18,11 @@ void Controller::setup()
 
   // Methods
   Method led_on_method;
-  led_on_method.attachCallback(makeFunctor((CBFunctor0 *)0,*this,&Controller::setLedOnCallback));
+  led_on_method.attachCallback(makeFunctor((Functor0 *)0,*this,&Controller::setLedOnCallback));
   methods_.push_back(led_on_method);
 
   Method led_off_method;
-  led_off_method.attachCallback(makeFunctor((CBFunctor0 *)0,*this,&Controller::setLedOffCallback));
+  led_off_method.attachCallback(makeFunctor((Functor0 *)0,*this,&Controller::setLedOffCallback));
   methods_.push_back(led_off_method);
 
   // Setup Streams

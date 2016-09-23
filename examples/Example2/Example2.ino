@@ -12,7 +12,7 @@ class Button
 public:
   //ctor takes a functor and stores it away in a member
 
-  Button(const CBFunctor0 & uponClickDoThis) :
+  Button(const Functor0 & uponClickDoThis) :
     notify(uponClickDoThis)
   {}
   void click()
@@ -23,7 +23,7 @@ public:
 private:
   //note this is a data member with a verb for a name - matches its
   //function-like usage
-  CBFunctor0 notify;
+  Functor0 notify;
 };
 
 class CDPlayer
@@ -51,13 +51,13 @@ void setup()
 
   // makeFunctor from object and ptr-to-member-function
   CDPlayer myCD;
-  Button playButton(makeFunctor((CBFunctor0 *)0,myCD,&CDPlayer::play));
-  Button stopButton(makeFunctor((CBFunctor0 *)0,myCD,&CDPlayer::stop));
+  Button playButton(makeFunctor((Functor0 *)0,myCD,&CDPlayer::play));
+  Button stopButton(makeFunctor((Functor0 *)0,myCD,&CDPlayer::stop));
   playButton.click(); //calls myCD.play()
   stopButton.click();  //calls myCD.stop()
 
   // makeFunctor from pointer-to-function
-  Button wowButton(makeFunctor((CBFunctor0 *)0,&wow));
+  Button wowButton(makeFunctor((Functor0 *)0,&wow));
   wowButton.click(); //calls wow()
 }
 
