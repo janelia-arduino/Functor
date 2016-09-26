@@ -18,7 +18,6 @@ public:
   void callback();
 protected:
   Functor0 callback_;
-  bool callback_is_attached_;
 };
 
 #endif
