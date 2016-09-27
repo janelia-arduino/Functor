@@ -142,9 +142,11 @@ public:
 	void play();
 	//...
 };
+```
 
 an application developer wishing to have a Button call back a CDPlayer would have to derive a new class from both CDPlayer and Button::Notifiable, overriding the pure virtual function to do the desired work:
 
+```c++
 class MyCDPlayer:public CDPlayer,public Button::Notifiable{
 public:
 	void notify()
