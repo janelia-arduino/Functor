@@ -58,16 +58,21 @@ void setup()
   Functor1<int> ftor; //a functor variable
   //make a functor from ptr-to-function
   ftor = makeFunctor((FtorType)0,fred);
+  Serial << "sizeof(ftor) = " << sizeof(ftor) << "\n";
   do5Times(ftor);
   //note ethel is not an exact match - ok, is compatible
   ftor = makeFunctor((FtorType)0,ethel);
+  Serial << "sizeof(ftor) = " << sizeof(ftor) << "\n";
   do5Times(ftor);
 
   //create a D object to be a callback target
   D myD;
   //make functor from object and ptr-to-member-func
   ftor = makeFunctor((FtorType)0,myD,&B::ricky);
+  Serial << "sizeof(ftor) = " << sizeof(ftor) << "\n";
   do5Times(ftor);
+
+  Serial << "\n";
 }
 
 void loop()
