@@ -287,7 +287,7 @@ public:
 template <class Func>
 class CBFunctionTranslator0:public Functor0{
 public:
-  CBFunctionTranslator0(Func f):Functor0(thunk,0,f,0){}
+  CBFunctionTranslator0(Func f):Functor0(thunk,0,(const void *)f,0){}
   static void thunk(const FunctorBase &ftor)
   {
     (Func(ftor.func))();
@@ -351,7 +351,7 @@ public:
 template <class RT,class Func>
 class CBFunctionTranslator0wRet:public Functor0wRet<RT>{
 public:
-  CBFunctionTranslator0wRet(Func f):Functor0wRet<RT>(thunk,0,f,0){}
+  CBFunctionTranslator0wRet(Func f):Functor0wRet<RT>(thunk,0,(const void *)f,0){}
   static RT thunk(const FunctorBase &ftor)
   {
     return (Func(ftor.func))();
@@ -418,7 +418,7 @@ public:
 template <class P1,class Func>
 class CBFunctionTranslator1:public Functor1<P1>{
 public:
-  CBFunctionTranslator1(Func f):Functor1<P1>(thunk,0,f,0){}
+  CBFunctionTranslator1(Func f):Functor1<P1>(thunk,0,(const void *)f,0){}
   static void thunk(const FunctorBase &ftor,P1 p1)
   {
     (Func(ftor.func))(p1);
@@ -513,7 +513,7 @@ public:
 template <class P1,class RT,class Func>
 class CBFunctionTranslator1wRet:public Functor1wRet<P1,RT>{
 public:
-  //  CBFunctionTranslator1wRet(Func f):Functor1wRet<P1,RT>(thunk,0,f,0){}
+  //  CBFunctionTranslator1wRet(Func f):Functor1wRet<P1,RT>(thunk,0,(const void *)f,0){}
   //  EBR
   CBFunctionTranslator1wRet(Func f):Functor1wRet<P1,RT>(thunk,0,(void*)f,0){}
   static RT thunk(const FunctorBase &ftor,P1 p1)
@@ -616,7 +616,7 @@ public:
 template <class P1,class P2,class Func>
 class CBFunctionTranslator2:public Functor2<P1,P2>{
 public:
-  CBFunctionTranslator2(Func f):Functor2<P1,P2>(thunk,0,f,0){}
+  CBFunctionTranslator2(Func f):Functor2<P1,P2>(thunk,0,(const void *)f,0){}
   static void thunk(const FunctorBase &ftor,P1 p1,P2 p2)
   {
     (Func(ftor.func))(p1,p2);
@@ -717,7 +717,7 @@ public:
 template <class P1,class P2,class RT,class Func>
 class CBFunctionTranslator2wRet:public Functor2wRet<P1,P2,RT>{
 public:
-  //  CBFunctionTranslator2wRet(Func f):Functor2wRet<P1,P2,RT>(thunk,0,f,0){}
+  //  CBFunctionTranslator2wRet(Func f):Functor2wRet<P1,P2,RT>(thunk,0,(const void *)f,0){}
   //  EBR
   CBFunctionTranslator2wRet(Func f):Functor2wRet<P1,P2,RT>(thunk,0,(void*)f,0){}
   static RT thunk(const FunctorBase &ftor,P1 p1,P2 p2)
@@ -817,7 +817,7 @@ public:
 template <class P1,class P2,class P3,class Func>
 class CBFunctionTranslator3:public Functor3<P1,P2,P3>{
 public:
-  CBFunctionTranslator3(Func f):Functor3<P1,P2,P3>(thunk,0,f,0){}
+  CBFunctionTranslator3(Func f):Functor3<P1,P2,P3>(thunk,0,(const void *)f,0){}
   static void thunk(const FunctorBase &ftor,P1 p1,P2 p2,P3 p3)
   {
     (Func(ftor.func))(p1,p2,p3);
@@ -921,7 +921,7 @@ template <class P1,class P2,class P3,class RT,class Func>
 class CBFunctionTranslator3wRet:public Functor3wRet<P1,P2,P3,RT>{
 public:
   CBFunctionTranslator3wRet(Func f):
-    Functor3wRet<P1,P2,P3,RT>(thunk,0,f,0){}
+    Functor3wRet<P1,P2,P3,RT>(thunk,0,(const void *)f,0){}
   static RT thunk(const FunctorBase &ftor,P1 p1,P2 p2,P3 p3)
   {
     return (Func(ftor.func))(p1,p2,p3);
@@ -1026,7 +1026,7 @@ public:
 template <class P1,class P2,class P3,class P4,class Func>
 class CBFunctionTranslator4:public Functor4<P1,P2,P3,P4>{
 public:
-  //        CBFunctionTranslator4(Func f):Functor4<P1,P2,P3,P4>(thunk,0,f,0){}
+  //        CBFunctionTranslator4(Func f):Functor4<P1,P2,P3,P4>(thunk,0,(const void *)f,0){}
   //EBR
   CBFunctionTranslator4(Func f):Functor4<P1,P2,P3,P4>(thunk,0,(void*)f,0){}
   static void thunk(const FunctorBase &ftor,P1 p1,P2 p2,P3 p3,P4 p4)
@@ -1134,7 +1134,7 @@ template <class P1,class P2,class P3,class P4,class RT,class Func>
 class CBFunctionTranslator4wRet:public Functor4wRet<P1,P2,P3,P4,RT>{
 public:
   CBFunctionTranslator4wRet(Func f):
-    Functor4wRet<P1,P2,P3,P4,RT>(thunk,0,f,0){}
+    Functor4wRet<P1,P2,P3,P4,RT>(thunk,0,(const void *)f,0){}
   static RT thunk(const FunctorBase &ftor,P1 p1,P2 p2,P3 p3,P4 p4)
   {
     return (Func(ftor.func))(p1,p2,p3,p4);
