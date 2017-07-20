@@ -224,7 +224,7 @@ class FunctorBase{
 public:
   typedef void (FunctorBase::*_MemFunc)();
   typedef void (*_Func)();
-  FunctorBase():callee(0),func(0){}
+  FunctorBase():func(0),callee(0){}
   FunctorBase(const void *c,const void *f,size_t sz)
   {
     if(c) //must be callee/memfunc
