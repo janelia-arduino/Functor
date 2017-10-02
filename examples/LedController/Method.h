@@ -7,7 +7,7 @@
 // ----------------------------------------------------------------------------
 #ifndef _METHOD_H_
 #define _METHOD_H_
-#include "Functor.h"
+#include <Functor.h>
 
 
 class Method

@@ -1,8 +1,8 @@
-#include "Arduino.h"
-#include "Streaming.h"
-#include "Functor.h"
+#include <Arduino.h>
+#include <Streaming.h>
+#include <Functor.h>
 
-const unsigned int BAUDRATE = 9600;
+const long BAUDRATE = 115200;
 
 //do5Times() is a function that takes a functor and invokes it 5 times
 

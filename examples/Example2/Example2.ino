@@ -1,8 +1,8 @@
-#include "Arduino.h"
-#include "Streaming.h"
-#include "Functor.h"
+#include <Arduino.h>
+#include <Streaming.h>
+#include <Functor.h>
 
-const unsigned int BAUDRATE = 9600;
+const long BAUDRATE = 115200;
 
 //Button is a component that provides a functor-based
 //callback mechanism, so you can wire it up to whatever you wish

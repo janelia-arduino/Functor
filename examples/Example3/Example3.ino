@@ -1,8 +1,8 @@
-#include "Arduino.h"
-#include "Streaming.h"
-#include "Functor.h"
+#include <Arduino.h>
+#include <Streaming.h>
+#include <Functor.h>
 
-const unsigned int BAUDRATE = 9600;
+const long BAUDRATE = 115200;
 
 const Functor0 dummy_functor;
 

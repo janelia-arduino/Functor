@@ -6,9 +6,10 @@
 // ----------------------------------------------------------------------------
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
-#include "Functor.h"
-#include "Array.h"
-#include "Streaming.h"
+#include <Functor.h>
+#include <Array.h>
+#include <Streaming.h>
+
 #include "Constants.h"
 #include "Method.h"
 

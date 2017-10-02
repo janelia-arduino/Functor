@@ -7,14 +7,14 @@
 // ----------------------------------------------------------------------------
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
-#include "Arduino.h"
+#include <Arduino.h>
 
 
 namespace constants
 {
 enum{METHOD_COUNT_MAX=4};
 
-extern const size_t baudrate;
+extern const long baudrate;
 
 extern const size_t led_pin;
 
