@@ -10,7 +10,7 @@
 
 namespace constants
 {
-const long baudrate = 115200;
+const long baud = 115200;
 
 const size_t led_pin = 13;
 }

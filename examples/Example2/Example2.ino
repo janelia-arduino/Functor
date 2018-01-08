@@ -2,7 +2,7 @@
 #include <Streaming.h>
 #include <Functor.h>
 
-const long BAUDRATE = 115200;
+const long BAUD = 115200;
 
 //Button is a component that provides a functor-based
 //callback mechanism, so you can wire it up to whatever you wish
@@ -46,7 +46,7 @@ void wow()
 
 void setup()
 {
-  Serial.begin(BAUDRATE);
+  Serial.begin(BAUD);
   delay(1000);
 
   // makeFunctor from object and ptr-to-member-function

@@ -2,7 +2,7 @@
 #include <Streaming.h>
 #include <Functor.h>
 
-const long BAUDRATE = 115200;
+const long BAUD = 115200;
 
 //do5Times() is a function that takes a functor and invokes it 5 times
 
@@ -49,7 +49,7 @@ public:
 
 void setup()
 {
-  Serial.begin(BAUDRATE);
+  Serial.begin(BAUD);
   delay(1000);
 
   //create a typedef of the functor type to simplify dummy argument

@@ -44,7 +44,7 @@ void Controller::setup()
   methods_.push_back(write_led_off_method);
 
   // Setup Streams
-  Serial.begin(constants::baudrate);
+  Serial.begin(constants::baud);
 }
 
 void Controller::update()

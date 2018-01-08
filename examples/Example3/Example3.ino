@@ -2,7 +2,7 @@
 #include <Streaming.h>
 #include <Functor.h>
 
-const long BAUDRATE = 115200;
+const long BAUD = 115200;
 
 const Functor0 dummy_functor;
 
@@ -59,7 +59,7 @@ void wow()
 
 void setup()
 {
-  Serial.begin(BAUDRATE);
+  Serial.begin(BAUD);
   delay(1000);
 
   // makeFunctor from object and ptr-to-member-function

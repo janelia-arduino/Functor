@@ -14,7 +14,7 @@ namespace constants
 {
 enum{METHOD_COUNT_MAX=4};
 
-extern const long baudrate;
+extern const long baud;
 
 extern const size_t led_pin;
 
