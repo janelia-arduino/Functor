@@ -1,16 +1,16 @@
-# Functor
+#+TITLE: Functor
+#+AUTHOR: Peter Polidoro
+#+EMAIL: peterpolidoro@gmail.com
 
-Authors:
+* Library Information
+  - Author :: Rich Hickey
+  - Maintainer :: Peter Polidoro
+  - License :: BSD
 
-    Rich Hickey
+  [[./extras/callback.org][CALLBACKS IN C++ USING TEMPLATE FUNCTORS]]
 
-Maintainers:
-
-    Peter Polidoro <polidorop@janelia.hhmi.org>
-
-[CALLBACKS IN C++ USING TEMPLATE FUNCTORS](http://www.tutok.sk/fastgl/callback.html)
-
-```c++
+* Documentation
+  #+BEGIN_SRC C++
 /* Functor.h
  * This is Rich Hickey's callback library...
  * http://www.tutok.sk/fastgl/callback.html
@@ -106,5 +106,5 @@ Maintainers:
   operator that will allow it to be evaluated in a conditional (with
   'true' meaning the functor is set, 'false' meaning it is not), and that
   Functors can be constructed from the result of makeFunctor(), given
-  you've passed something compatible to makeFunctor().
-```
+  you've passed something compatible to makeFunctor()
+  #+END_SRC
