@@ -12,5 +12,6 @@ namespace constants
 {
 const long baud = 115200;
 
-const size_t led_pin = 13;
+const int led_pin = 13;
+const long loop_delay = 1000;
 }

@@ -1,21 +1,14 @@
-#include <Arduino.h>
-#include <Streaming.h>
-#include <Array.h>
-#include <Functor.h>
-
-#include "Constants.h"
-#include "Method.h"
-#include "Controller.h"
+#include "LedController.h"
 
 
-Controller controller;
+LedController led_controller;
 
 void setup()
 {
-  controller.setup();
+  led_controller.setup();
 }
 
 void loop()
 {
-  controller.update();
+  led_controller.update();
 }

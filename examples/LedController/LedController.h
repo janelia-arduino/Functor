@@ -6,23 +6,21 @@
 // ----------------------------------------------------------------------------
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
+#include <Arduino.h>
 #include <Functor.h>
-#include <Array.h>
-#include <Streaming.h>
 
 #include "Constants.h"
 #include "Method.h"
 
 
-class Controller
+class LedController
 {
 public:
-  Controller();
   void setup();
   void update();
 
 private:
-  Array<Method,constants::METHOD_COUNT_MAX> methods_;
+  Method methods_[constants::METHOD_COUNT_MAX];
 
   void setLedOnCallback();
   void setLedOffCallback();

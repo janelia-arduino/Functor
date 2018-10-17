@@ -1,41 +1,42 @@
 #+TITLE: Functor
-#+AUTHOR: Peter Polidoro
+#+AUTHOR: Rich Hickey
 #+EMAIL: peterpolidoro@gmail.com
 
 * Library Information
+  - Name :: Functor
+  - Version :: 1.0.1
+  - License :: BSD
+  - URL :: https://github.com/janelia-arduino/Functor
   - Author :: Rich Hickey
   - Maintainer :: Peter Polidoro
-  - License :: BSD
+  - Email :: peterpolidoro@gmail.com
 
   [[./extras/callback.org][CALLBACKS IN C++ USING TEMPLATE FUNCTORS]]
 
 * Documentation
-  #+BEGIN_SRC C++
-/* Functor.h
- * This is Rich Hickey's callback library...
- * http://www.tutok.sk/fastgl/callback.html
- *
- * I've just renamed it to Functor.h
- */
-//**************** Functor.h **********************
-// Copyright 1994 Rich Hickey
-/* Permission to use, copy, modify, distribute and sell this software
- * for any purpose is hereby granted without fee,
- * provided that the above copyright notice appear in all copies and
- * that both that copyright notice and this permission notice appear
- * in supporting documentation.  Rich Hickey makes no
- * representations about the suitability of this software for any
- * purpose.  It is provided "as is" without express or implied warranty.
- */
 
-// 06/12/94 Rich Hickey
-// 3rd major revision
-// Now functors are concrete classes, and should be held by value
-// Virtual function mechanism removed
-// Generic makeFunctor() mechanism added for building functors
-// from both stand-alone functions and object/ptr-to-mem-func pairs
+  This is Rich Hickey's callback library...
 
-/*
+  [[http://www.tutok.sk/fastgl/callback.html]]
+
+  I've just renamed it to Functor.h (Peter Polidoro).
+
+  Copyright 1994 Rich Hickey
+  Permission to use, copy, modify, distribute and sell this software
+  for any purpose is hereby granted without fee,
+  provided that the above copyright notice appear in all copies and
+  that both that copyright notice and this permission notice appear
+  in supporting documentation.  Rich Hickey makes no
+  representations about the suitability of this software for any
+  purpose.  It is provided "as is" without express or implied warranty.
+
+  06/12/94 Rich Hickey
+  3rd major revision
+  Now functors are concrete classes, and should be held by value
+  Virtual function mechanism removed
+  Generic makeFunctor() mechanism added for building functors
+  from both stand-alone functions and object/ptr-to-mem-func pairs
+
   To use:
 
   If you wish to build a component that provides/needs a callback, simply
@@ -106,5 +107,4 @@
   operator that will allow it to be evaluated in a conditional (with
   'true' meaning the functor is set, 'false' meaning it is not), and that
   Functors can be constructed from the result of makeFunctor(), given
-  you've passed something compatible to makeFunctor()
-  #+END_SRC
+  you've passed something compatible to makeFunctor().

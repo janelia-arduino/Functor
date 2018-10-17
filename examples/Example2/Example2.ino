@@ -13,7 +13,7 @@ public:
   //ctor takes a functor and stores it away in a member
 
   Button(const Functor0 & uponClickDoThis) :
-    notify(uponClickDoThis)
+  notify(uponClickDoThis)
   {}
   void click()
   {
